@@ -1,8 +1,41 @@
+body{
+  background-image: url("https://i.ibb.co/sbdPTfF/cool-background3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: normal;
+}
+
 .container{
-  margin-top: 350px;
+  margin-top: 150px;
+}
+
+/* .col-sm-3{
+  border: double;
+  margin: 30px;
+#titleContainer{
+	margin-top: 50px;
+} */
+
+.button-container{
+  margin-bottom: 20px;
 }
 
 .col-sm-3{
+  text-align: center;
+  padding: 20px;
+  background-color: plum;
   border: double;
   margin: 30px;
+}
+
+#titleContainer{
+	margin-top: 50px;
+}
+
+#btnContainer{
+	margin-top: 50px;
+}
+
+#secondRowBtnSpacing{
+	margin: 10px;
 }
