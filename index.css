@@ -1,0 +1,8 @@
+.container{
+  margin-top: 350px;
+}
+
+.col-sm-3{
+  border: double;
+  margin: 30px;
+}
