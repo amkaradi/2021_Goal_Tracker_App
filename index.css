@@ -39,3 +39,17 @@ body{
 #secondRowBtnSpacing{
 	margin: 10px;
 }
+
+.card {
+	height: 350px;
+	width: 350px;
+}
+
+.card {
+	margin: 10px
+}
+
+#showForm {
+	height: 500px;
+	width: 500px;
+}
