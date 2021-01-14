@@ -1,23 +1,17 @@
-// Derick's Code
+// ENVOKED FUNCTIONS
+fetchGoals()
 
-// STEP 1
 // VARIABLES
-// Create variable for btnAddNewGoal
-var btnAddNewGoal = document.getElementById("btnAddNewGoal")
-var demoForm = document.getElementById("demoForm")
-var form = document.getElementById("form")
+const btnAddNewGoal = document.getElementById("btnAddNewGoal")
+const demoForm = document.getElementById("demoForm")
+const form = document.getElementById("form")
+const divTileContainer = document.querySelector("#tileContainerId")
 
-// Create event lister for +Add Goal btn
-btnAddNewGoal.addEventListener("click", displayForm);
+// EVENT LISTENERS
+btnAddNewGoal.addEventListener("click", displayForm)
+form.addEventListener("submit", submitForm)
 
-function displayForm() {
-	if(demoForm.style.display === "none"){
-		demoForm.setAttribute("style", "")
-	} else{
-		demoForm.setAttribute("style", "display: none;")
-	}
-}
-
+// FUNCTIONS
 function fetchGoals(){
 	fetch("http://localhost:3000/goals")
 	.then(response => response.json())
@@ -27,7 +21,7 @@ function fetchGoals(){
 }
 
 function showItem(itemData){
-	// CREATE ELEMENTS
+	// create elements
 	const outerDiv = document.createElement("div")
 	const innerDiv = document.createElement("div")
 	const deleteBtn = document.createElement("button")
@@ -35,10 +29,7 @@ function showItem(itemData){
 	const h1 = document.createElement("h1")
 	const p = document.createElement("p")
 
-	// GRAB ELEMENT
-	const divTileContainer = document.querySelector("#tileContainerId")
-
-	// ADD ATTRIBUTES TO ELEMENTS
+	// add attributes
 	outerDiv.setAttribute("class", "card")
 	outerDiv.setAttribute("style", "width: 18rem")
 	innerDiv.setAttribute("class", "card-body justify-content-center")
@@ -51,29 +42,34 @@ function showItem(itemData){
 	h1.innerText = itemData.goal
 	p.innerText = itemData.description
 
-	// CONNECT ALL THE ELEMENTS
+	// connect elements
 	outerDiv.append(innerDiv)
 	innerDiv.append(deleteBtn, hashBtn, h1, p)
 	divTileContainer.append(outerDiv)
 
 }
 
-
-form.addEventListener("submit", submitForm)
+function displayForm() {
+	if(demoForm.style.display === "none"){
+		demoForm.setAttribute("style", "")
+	} else{
+		demoForm.setAttribute("style", "display: none;")
+	}
+}
 
 function submitForm(event){
 	event.preventDefault()
-	// GRAB NAME PART OF FORM
+	// grab name part of form
 	const goalNameInput = document.getElementById("goalNameInput")
-	// GRAB USER'S INPUT FOR NAME
+	// grab user input for name
 	const userNameInput = goalNameInput.value
-	// GRAB CATEGORY PART OF FORM
+	// grab category part of form
 	const goalCategoryInput = document.getElementById("pickCategoryInput")
-	// GRAB USER'S INPUT FOR CATEGORY
+	// grab user input for category
 	const userCategoryInput = goalCategoryInput.value
-	// GRAB DETAILS PART OF FORM
+	// grab details part of form
 	const goalDetailInput = document.getElementById("goalDetailInput")
-	// GRAB USER'S INPUT FOR DETAILS
+	// grab user input for details
 	const userDetailInput = goalDetailInput.value
 
 	const newGoalObject = {
@@ -81,10 +77,19 @@ function submitForm(event){
 		category: userCategoryInput,
 		description: userDetailInput
 	}
+	// backend persistence
+	fetch()
 
-	showItem(newGoalObject)
-
-
+	// showItem(newGoalObject)
 }
 
-fetchGoals()
+
+
+
+
+
+
+
+
+
+
