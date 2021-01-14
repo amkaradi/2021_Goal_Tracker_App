@@ -28,13 +28,15 @@
 <div class="d-flex justify-content-center">
 <!-- Add goal btn -->
 	<div id="secondRowBtnSpacing">
-		<button type="button" class="btn btn-primary">+ Add Goal</button>
+		<button type="button" class="btn btn-primary" id="btnAddNewGoal" data-dismiss="alert">+ Add Goal</button>
+		<a href="" id="showForm"></a>
 	</div>
-<!-- Search bar -->
+	<!-- Search bar -->
 	<div id="secondRowBtnSpacing">
 		<input class="form-control" type="text" placeholder="Search" aria-label="Search">
 	</div>
-<!-- Filter drop down -->
+	<!-- Search bar END -->
+	<!-- Filter drop down -->
 	<div id="secondRowBtnSpacing">
 		<div class="dropdown">
 		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,21 +44,70 @@
 		  </button>
 		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		    <a class="dropdown-item" href="#">#Finance</a>
-		    <a class="dropdown-item" href="#">#Workout</a>
-		    <a class="dropdown-item" href="#">#Relationship</a>
+		    <a class="dropdown-item" href="#">#Project</a>
+		    <a class="dropdown-item" href="#">#Learn</a>
 		  </div>
 		</div>
 	</div>
+	<!-- Filter drop down END -->
 </div>
 <!-- Buttons END-->
+<br>
+<!-- Form -->
+<div class="container" id="demoForm" style="display: none">
+	<form>
+	  <div class="form-group">
+	    <label for="exampleFormControlInput1">Name your goal</label>
+	    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="type your goal name here">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleFormControlSelect1">Pick a category</label>
+	    <select class="form-control" id="exampleFormControlSelect1">
+	      <option>Finance</option>
+	      <option>Project</option>
+	      <option>Learn</option>
+	    </select>
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleFormControlTextarea1">Enter goal details. Be specific!</label>
+	    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="example, save $100 per week" rows="3"></textarea>
+	  </div>
+	  <!-- Sumbit form btn -->
+		<div id="secondRowBtnSpacing">
+			<button type="button" class="btn btn-primary" id="btnSubmit" data-dismiss="alert">Submit</button>
+			<a href="" id="showForm"></a>
+		</div>
+		<!-- Sumbit form btn END -->
+	</form>
+</div>	
+<!-- Form END -->
+<br>
 <!-- Tiles -->
-
+<div class="d-flex justify-content-center">
+	<div class="card" style="width: 18rem;">
+	  <div class="card-body justify-content-center">
+	    	<button type="button" class="btn btn-success">Add</button>
+		  	<button type="button" class="btn btn-danger">Delete</button>
+		  	<button type="button" class="btn btn-secondary">#Hashtag</button>
+	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	  </div>
+	</div>
+<!-- Second test tile -->
+	<div class="card" style="width: 18rem;">
+	  <div class="card-body justify-content-center">
+	    	<button type="button" class="btn btn-success">Add</button>
+		  	<button type="button" class="btn btn-danger">Delete</button>
+		  	<button type="button" class="btn btn-secondary">#Hashtag</button>
+	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	  </div>
+	</div>
+</div>
 <!-- Tiles END-->
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- Mannual JS -->
-<script type="text/javascript" src="index.js"></script>
+<script defer type="text/javascript" src="index.js"></script>
 </body>
 </html>
