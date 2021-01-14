@@ -1,0 +1,6 @@
+{
+  "goals": [
+    { "id": 1, "goal": "save money", "category": "#finance", "description": "I really wanna save money" },
+    { "id": 2, "goal": "learn russian", "category": "#learn", "description": "I really wanna learn russian" }
+  ]
+}
